@@ -18,28 +18,35 @@ Pizza.prototype.sizePrice = function(string) {
 }
 
 Pizza.prototype.toppingsSelect = function(string) {
-  if (string === "pepperoni") {
-    this.toppings.push("pepperoni");
-  } else if (string === "sausage") {
-    this.toppings.push("sausage");
-  } else if (string === "olives") {
-    this.toppings.push("olives");
+  var pepperoni = {topping: "pepperoni"}
+  var sausage = {topping: "sausage"}
+  var olives = {topping: "olives"}
+  var toppings = [pepperoni, sausage, olives]
+
+
+  if (string === 'pepperoni') {
+    this.toppings.push(toppings[0]);
+  } else if (string === 'sausage') {
+    this.toppings.push(toppings[1]);
+  } else if (string === 'olives') {
+    this.toppings.push(toppings[2]);
   }
   return this.toppings;
 }
-
+// console.log(this.toppings);
 Pizza.prototype.fullPrice = function() {
   this.orderPrice = this.toppings.length + this.orderSize;
   return this.orderPrice;
 }
 
-Pizza.prototype.showToppings = function() {
-  var displayToppings = [];
-  this.toppings.forEach(function(string) {
-    displayToppings.push(" ", + string)
-  });
-  return displayToppings;
-}
+// Pizza.prototype.showToppings = function() {
+//   var displayToppings = [];
+//
+//   this.toppings.forEach(function(string) {
+//     displayToppings.push(" ", + string);
+//   });
+//   return displayToppings;
+// }
 
 $(document).ready(function(){
 
@@ -55,30 +62,31 @@ $("form#size-toppings").submit(function(event) {
   var newpizzaSize = yourPizza.sizePrice();
 
   if ($("#0").is(":checked")) {
-      var inputPep = $("input#0").val();
+      inputPep = $("input#0").val();
       yourPizza.toppingsSelect(inputPep);
     } else {
-      inputPep = 0;
+      inputPep = "";
     }
 
   if ($("#1").is(":checked")) {
-      var inputSaus = $("input#1").val();
+      inputSaus = $("input#1").val();
       yourPizza.toppingsSelect(inputSaus);
     } else {
-      inputSaus = 0;
+      inputSaus = "";
     }
 
   if ($("#2").is(":checked")) {
-      var inputOli = $("input#2").val();
+      inputOli = $("input#2").val();
       yourPizza.toppingsSelect(inputOli);
     } else {
-      inputOli = 0;
+      inputOli = "";
     }
-yourPizzaToppings = yourPizza.showToppings();
+// yourPizzaToppings = yourPizza.showToppings();
 yourPizzaPrice = yourPizza.fullPrice();
-  // newToppings = (inputPep, inputSaus, inputOli)
-  // newPizza.orderDisplay.push(newToppings);
-debugger;
-$("ul#price").append("<li><span class='price'>" + yourPizzaPrice + "</span></li>");
+
+
+$("ul#price").append("<li><span class='price'>" + inputPep + " " + inputSaus + " " + inputOli + "</span></li>");
+
+$()
 });
 });

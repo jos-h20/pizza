@@ -10,7 +10,7 @@ describe('Pizza', function() {
    });
    it("selects toppings for the pizza", function () {
      var testPizza = new Pizza;
-     expect(testPizza.toppingsSelect("pepperoni")).to.eql(["pepperoni"])
+     expect(testPizza.toppingsSelect('pepperoni')).to.eql([{topping: "pepperoni"}]);
    });
    it("determines the price of the size and toppings", function() {
      var testPizza = new Pizza;
@@ -18,6 +18,11 @@ describe('Pizza', function() {
      testPizza.toppings = ["pepperoni"];
      expect(testPizza.fullPrice()).to.equal(12);
    });
-
-
+   it("pizza Object will display the contents of its toppings property", function() {
+ 		var testPizza = new Pizza
+ 		var pepperoni = "pepperoni"
+ 		var sausage = "sausage"
+ 		testPizza.toppings = [pepperoni, sausage];
+ 		expect(testPizza.showToppings()).to.eql([" pepperoni"," sausage"]);
+  });
 });
