@@ -20,27 +20,27 @@
         <form class="form-inline" role="form" id="size-toppings" action="index.html" method="post">
           <div class="form-group col-sm-6">
             <p><label for="chosenSize"><h1>Choose your size!</h1></label>
+            <p>Small: $7; Medium: $9; Large: $11</p>
                 <select id="chosenSize" class="btn btn-lg">
-                  <option value="small">Small</option>
-                  <option value="medium">Medium</option>
-                  <option value="large">Large</option>
-             </div>
-             <div class="form-group">
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large">Large</option>
              </select></p>
-               <p><label for="chosenSize"><h1>Choose your toppings!</h1></label>
+               <p><label for="chosenToppings"><h1>Choose your toppings!</h1></label>
+               <p>Toppings are a dollar each!</p>
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" id="0" value="pepperoni"> pepperoni
+                    <input type="checkbox" id="0" value="Pepperoni"> pepperoni
                   </label>
                 </div>
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" id="1" value="sausage"> sausage
+                    <input type="checkbox" id="1" value="Sausage"> sausage
                   </label>
                 </div>
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" id="2" value="olives"> olives
+                    <input type="checkbox" id="2" value="Olives"> olives
                   </label>
                 </div>
              </div>
@@ -48,10 +48,18 @@
              <p class="button"><button type="submit" class="btn sub">Submit Order!</button></p>
              </div>
           </form>
+
+          <h2>Your Order:</h2>
+          <h3>Size:</h3>
+          <p id="size">
+
+          </p>
+          <h3>Toppings:</h3>
           <ul id="toppings">
 
           </ul>
-          <p #id="price">
+          <h3>Price:</h3>
+          <p id="price">
 
           </p>
       </div>

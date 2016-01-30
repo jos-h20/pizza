@@ -18,10 +18,10 @@ describe('Pizza', function() {
      testPizza.toppings = ["pepperoni"];
      expect(testPizza.fullPrice()).to.equal(12);
    });
-   it("pizza Object will display the contents of its toppings property", function() {
- 		var testPizza = new Pizza
- 		var pepperoni = "pepperoni"
- 		var sausage = "sausage"
+   it("displays chosen toppings", function() {
+ 		var testPizza = new Pizza;
+ 		var pepperoni = "pepperoni";
+ 		var sausage = "sausage";
  		testPizza.toppings = [pepperoni, sausage];
  		expect(testPizza.showToppings()).to.eql([" pepperoni"," sausage"]);
   });

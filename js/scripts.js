@@ -7,28 +7,28 @@ function Pizza () {
 }
 
 Pizza.prototype.sizePrice = function(string) {
-  if (string === "small") {
+  if (string === "Small") {
     this.orderSize = 7;
-  } else if (string === "medium") {
+  } else if (string === "Medium") {
     this.orderSize = 9;
-  } else if (string === "large") {
+  } else if (string === "Large") {
     this.orderSize = 11;
   }
   return this.orderSize;
 }
 
 Pizza.prototype.toppingsSelect = function(string) {
-  var pepperoni = {topping: "pepperoni"}
-  var sausage = {topping: "sausage"}
-  var olives = {topping: "olives"}
+  var pepperoni = {topping: "Pepperoni"}
+  var sausage = {topping: "Sausage"}
+  var olives = {topping: "Olives"}
   var toppings = [pepperoni, sausage, olives]
 
 
-  if (string === 'pepperoni') {
+  if (string === 'Pepperoni') {
     this.toppings.push(toppings[0]);
-  } else if (string === 'sausage') {
+  } else if (string === 'Sausage') {
     this.toppings.push(toppings[1]);
-  } else if (string === 'olives') {
+  } else if (string === 'Olives') {
     this.toppings.push(toppings[2]);
   }
   return this.toppings;
@@ -84,9 +84,10 @@ $("form#size-toppings").submit(function(event) {
 // yourPizzaToppings = yourPizza.showToppings();
 yourPizzaPrice = yourPizza.fullPrice();
 
+$("#size").append(inputSize);
 
-$("ul#price").append("<li><span class='price'>" + inputPep + " " + inputSaus + " " + inputOli + "</span></li>");
+$("#toppings").append('<p>' + inputPep + '</p>' + '<p>' + inputSaus + '</p>'  + '<p>' + inputOli + '</p>');
 
-$()
+$("#price").append("$" + yourPizzaPrice);
 });
 });
