@@ -14,9 +14,9 @@ describe('Pizza', function() {
    });
    it("determines the price of the size and toppings", function() {
      var testPizza = new Pizza;
-     testPizza.sizePrice("medium");
+     testPizza.sizePrice("large");
      testPizza.toppings = ["pepperoni"];
-     expect(testPizza.fullPrice()).to.equal(10);
+     expect(testPizza.fullPrice()).to.equal(12);
    });
 
 
