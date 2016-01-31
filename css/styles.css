@@ -1,0 +1,25 @@
+
+
+body {
+  background-color: #e5e5e5;
+}
+
+.jumbotron {
+  background-color: #b7b7b7;
+}
+
+.button {
+  margin-top: 100px;
+}
+
+#toppings {
+  margin-left: auto;
+}
+
+.navbar {
+  margin-top: 100px;
+}
+
+#order {
+  display: none;
+}

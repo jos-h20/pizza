@@ -11,12 +11,14 @@
 
 
 
-    <title>Pizza</title>
+    <title>Pizza Project</title>
   </head>
   <body>
+    <div class="jumbotron">
+      <h1>Javascript Pizza Project</h1>
+    </div>
     <div class="container">
       <div class="row">
-
         <form class="form-inline" role="form" id="size-toppings" action="index.html" method="post">
           <div class="form-group col-sm-6">
             <p><label for="chosenSize"><h1>Choose your size!</h1></label>
@@ -30,40 +32,49 @@
                <p>Toppings are a dollar each!</p>
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" id="0" value="Pepperoni"> pepperoni
+                    <input type="checkbox" id="0" value="Pepperoni"> Pepperoni
                   </label>
                 </div>
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" id="1" value="Sausage"> sausage
+                    <input type="checkbox" id="1" value="Sausage"> Sausage
                   </label>
                 </div>
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" id="2" value="Olives"> olives
+                    <input type="checkbox" id="2" value="Olives"> Olives
                   </label>
                 </div>
-             </div>
-             <div class="col-sm-6">
              <p class="button"><button type="submit" class="btn sub">Submit Order!</button></p>
              </div>
           </form>
-
+        <div class="col-sm-6">
           <h2>Your Order:</h2>
+          <div id="order">
+
+
           <h3>Size:</h3>
           <p id="size">
 
           </p>
           <h3>Toppings:</h3>
-          <ul id="toppings">
+          <p id="toppings">
 
-          </ul>
+          </p>
           <h3>Price:</h3>
           <p id="price">
 
           </p>
+          </div>
+        </div>
       </div>
-
     </div>
+    <div class="navbar navbar-inverse navbar-static-bottom" role="navigation">
+  <div class="container">
+    <div class="navbar-text pull-left">
+      <p>© 2016Josh Overly.</p>
+    </div>
+  </div>
+</div>
   </body>
 </html>

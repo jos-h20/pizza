@@ -50,44 +50,47 @@ Pizza.prototype.fullPrice = function() {
 
 $(document).ready(function(){
 
-$("form#size-toppings").submit(function(event) {
-  event.preventDefault();
+  $("form#size-toppings").submit(function(event) {
+    event.preventDefault();
 
-    yourPizza = new Pizza;
+      yourPizza = new Pizza;
 
 
-  inputSize = $("select#chosenSize").val();
-  yourPizza.sizePrice(inputSize);
+    inputSize = $("select#chosenSize").val();
+    yourPizza.sizePrice(inputSize);
 
-  var newpizzaSize = yourPizza.sizePrice();
+    var newpizzaSize = yourPizza.sizePrice();
 
-  if ($("#0").is(":checked")) {
-      inputPep = $("input#0").val();
-      yourPizza.toppingsSelect(inputPep);
-    } else {
-      inputPep = "";
-    }
+    if ($("#0").is(":checked")) {
+        inputPep = $("input#0").val();
+        yourPizza.toppingsSelect(inputPep);
+      } else {
+        inputPep = "";
+      }
 
-  if ($("#1").is(":checked")) {
-      inputSaus = $("input#1").val();
-      yourPizza.toppingsSelect(inputSaus);
-    } else {
-      inputSaus = "";
-    }
+    if ($("#1").is(":checked")) {
+        inputSaus = $("input#1").val();
+        yourPizza.toppingsSelect(inputSaus);
+      } else {
+        inputSaus = "";
+      }
 
-  if ($("#2").is(":checked")) {
-      inputOli = $("input#2").val();
-      yourPizza.toppingsSelect(inputOli);
-    } else {
-      inputOli = "";
-    }
-// yourPizzaToppings = yourPizza.showToppings();
-yourPizzaPrice = yourPizza.fullPrice();
+    if ($("#2").is(":checked")) {
+        inputOli = $("input#2").val();
+        yourPizza.toppingsSelect(inputOli);
+      } else {
+        inputOli = "";
+      }
+  // yourPizzaToppings = yourPizza.showToppings();
+  yourPizzaPrice = yourPizza.fullPrice();
 
-$("#size").append(inputSize);
+  $("#size").append(inputSize);
 
-$("#toppings").append('<p>' + inputPep + '</p>' + '<p>' + inputSaus + '</p>'  + '<p>' + inputOli + '</p>');
+  $("#toppings").append('<p>' + inputPep + '</p>' + '<p>' + inputSaus + '</p>'  + '<p>' + inputOli + '</p>');
 
-$("#price").append("$" + yourPizzaPrice);
-});
+  $("#price").append("$" + yourPizzaPrice);
+
+  $("#order").show()
+
+  });
 });
