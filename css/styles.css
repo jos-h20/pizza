@@ -5,6 +5,7 @@ body {
 }
 
 .jumbotron {
+  background-image: url('http://i.imgur.com/RRUe0Mo.png');
   background-color: #b7b7b7;
   text-align: center;
 }
